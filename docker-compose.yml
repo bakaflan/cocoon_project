@@ -1,0 +1,22 @@
+version: '3'
+services:
+  mysql:
+    container_name: cocoon-backend-mysql
+    image: mysql:8.0.26
+    command: [
+        'mysqld',
+        '--innodb-buffer-pool-size=20M',
+        '--character-set-server=utf8',
+        '--collation-server=utf8_general_ci',
+        '--default-time-zone=+8:00',
+        '--lower-case-table-names=1',
+        '--sql_mode=TRADITIONAL'
+    ]
+    environment:
+      - "MYSQL_ALLOW_EMPTY_PASSWORD=true"
+      - "MYSQL_ROOT_PASSWORD="
+    volumes:
+    - ./config/mysql:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+    restart: always

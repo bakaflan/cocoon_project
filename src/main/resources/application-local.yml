@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/COCOON_LOCAL?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&connectionCollation=utf8mb4_bin&useServerPrepStmts=false&rewriteBatchedStatements=true&serverTimezone=GMT%2B8&useSSL=false
+    username: root
+    password:
+    hikari:
+      connection-timeout: 10000
+      idle-timeout: 60000
+      max-lifetime: 110000
+      minimum-idle: 10
+      maximum-pool-size: 50
