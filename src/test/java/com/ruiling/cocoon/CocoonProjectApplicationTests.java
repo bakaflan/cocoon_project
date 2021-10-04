@@ -1,13 +1,11 @@
-package com.ruiling.cocoon_project;
+package com.ruiling.cocoon;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class CocoonProjectApplicationTests {
-
     @Test
     void contextLoads() {
     }
-
 }

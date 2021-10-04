@@ -1,0 +1,23 @@
+apply plugin: 'jacoco'
+
+jacocoTestReport {
+    reports {
+        xml.required = false
+        csv.required = false
+        html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
+    }
+}
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.6
+            }
+            element = 'CLASS'
+            excludes = [
+                    'com.ruiling.cocoon_project.CocoonProjectApplication'
+            ]
+        }
+    }
+}

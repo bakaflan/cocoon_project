@@ -8,6 +8,9 @@ group = 'com.ruiling'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
+apply from: "${rootProject.projectDir}/gradle/jacoco.gradle"
+apply from: "${rootProject.projectDir}/gradle/checkstyle.gradle"
+
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
