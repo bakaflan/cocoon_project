@@ -1,0 +1,11 @@
+task installGitHooks(type: Copy) {
+    from new File(rootProject.rootDir, 'gradle/config/pre-commit')
+    into {
+        new File(rootProject.rootDir, '.git/hooks')
+    }
+    fileMode 0755
+}
+
+tasks.matching { it.name != 'installGitHooks' }.all { Task task ->
+    task.dependsOn installGitHooks
+}

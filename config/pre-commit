@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo 'Local Building ...'
+sh ./localBuild.sh
