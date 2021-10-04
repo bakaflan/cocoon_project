@@ -1,5 +1,5 @@
 task installGitHooks(type: Copy) {
-    from new File(rootProject.rootDir, 'gradle/config/pre-commit')
+    from new File(rootProject.rootDir, 'config/pre-commit')
     into {
         new File(rootProject.rootDir, '.git/hooks')
     }
