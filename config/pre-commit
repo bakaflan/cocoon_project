@@ -1,4 +1,5 @@
 #!/bin/bash
 
-echo 'Local Building ...'
-sh ./localBuild.sh
+./gradlew clean build
+RESULT=$?
+exit $RESULT
