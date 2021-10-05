@@ -1,0 +1,10 @@
+COMMODITY:
+  - SKU: 1
+    NAME: 测试用商品
+    DESCRIPTION: 描述
+    PRICE: 100
+    IMAGE: |
+      {
+        "url": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180415%2Fa9a20713f23c4d859499dc56a2886f96.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1635959810&t=2407fda4d5beb8c3ce70ae0e720d5ac9",
+        "thumbnailUrl": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180415%2Fa9a20713f23c4d859499dc56a2886f96.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1635959810&t=2407fda4d5beb8c3ce70ae0e720d5ac9"
+      }
