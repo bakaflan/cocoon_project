@@ -16,7 +16,12 @@ jacocoTestCoverageVerification {
             }
             element = 'CLASS'
             excludes = [
-                    'com.ruiling.cocoon_project.CocoonProjectApplication'
+                    'com.ruiling.cocoon.CocoonProjectApplication.*',
+                    'com.ruiling.cocoon.infrastructure.*',
+                    'com.ruiling.cocoon.access.about.*',
+                    'com.ruiling.cocoon.domain.order.Order.OrderItem',
+                    'com.ruiling.cocoon.access.commodity.representation.CommodityDetailRepresentation',
+                    'com.ruiling.cocoon.access.order.representation.CreateOrderRepresentation'
             ]
         }
     }

@@ -1,5 +1,5 @@
 #!/bin/bash
 
-./gradlew clean build
+./localBuild.sh
 RESULT=$?
 exit $RESULT
