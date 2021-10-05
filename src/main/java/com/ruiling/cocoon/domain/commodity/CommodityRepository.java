@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -28,6 +29,14 @@ public class CommodityRepository {
         } catch (EmptyResultDataAccessException ex) {
             return Optional.empty();
         }
+    }
+
+    public List<Commodity> bySku(List<String> sku) {
+        String sql = "select * from commodity " +
+                "where sku in (:sku)";
+        MapSqlParameterSource param = new MapSqlParameterSource()
+                .addValue("sku", sku);
+        return namedTemplate.query(sql, param, rowMapper());
     }
 
     private RowMapper<Commodity> rowMapper() {

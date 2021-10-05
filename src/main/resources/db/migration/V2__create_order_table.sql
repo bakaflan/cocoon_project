@@ -1,0 +1,8 @@
+BEGIN;
+
+create table `order` (
+    ID VARCHAR(50) NOT NULL PRIMARY KEY,
+    JSON_CONTENT JSON NULL
+);
+
+COMMIT;

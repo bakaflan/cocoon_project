@@ -1,4 +1,4 @@
-package com.ruiling.cocoon.bussiness.product;
+package com.ruiling.cocoon.bussiness.commodity;
 
 import com.ruiling.cocoon.access.commodity.representation.CommodityDetailRepresentation;
 import com.ruiling.cocoon.domain.commodity.Commodity;
@@ -7,14 +7,16 @@ import com.ruiling.cocoon.infrastructure.exception.AppException;
 import com.ruiling.cocoon.infrastructure.exception.ExceptionCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class ProductApplicationService {
+public class ProductCommandService {
     private final CommodityRepository commodityRepository;
 
+    @Transactional(readOnly = true)
     public CommodityDetailRepresentation getCommodityBy(String sku) {
         Optional<Commodity> optionalProduct = commodityRepository.bySku(sku);
         return optionalProduct
