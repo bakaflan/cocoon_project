@@ -30,7 +30,6 @@ access目录作为项目的入口， 例如所有的Controller都应该在目录
 ```
     例如 商品(commodity) 这一资源的访问，都应该由
     /access/commodity 这一目录下的CommodityController接收
-    /access/representation 这一目录下包含了返回的结果体
 ```
 
 /business 业务层
@@ -43,7 +42,7 @@ business目录下包含了主要的业务逻辑，例如CommandService与QuerySe
     例如 需要对商品(Commodity)进行CRUD，
     那么一个请求会通过Controller传递给
     /bussiness/commodity/CommodityCommandService 进行处理
-    
+    /bussiness/commodity/representation 这一目录下包含了返回的结果体
 ```
 
 /domain 领域层
