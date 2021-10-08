@@ -20,4 +20,13 @@ public class CommodityControllerTest extends BaseTest {
                 .body("image.url", CoreMatchers.notNullValue())
                 .body("price", is(100));
     }
+
+    @Test
+    @DataSet("access/commodity/commodity.yml")
+    void should_not_found_commodity_detail_given_not_exists_id() {
+        given()
+                .get("/api/commodity/2")
+                .then()
+                .statusCode(404);
+    }
 }

@@ -2,12 +2,10 @@ package com.ruiling.cocoon.domain.commodity;
 
 import com.ruiling.cocoon.infrastructure.Image;
 import lombok.Getter;
-import lombok.Setter;
 
 import java.math.BigDecimal;
 
 @Getter
-@Setter
 public class Commodity {
     private String sku;
     private String name;

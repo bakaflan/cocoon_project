@@ -21,7 +21,7 @@ public class CommodityCommandService {
         Optional<Commodity> optionalProduct = commodityRepository.bySku(sku);
         return optionalProduct
                 .map(CommodityDetailRepresentation::new)
-                .orElseThrow(() -> new AppException(ExceptionCode.REQUEST_ARGUMENT_ERROR,
+                .orElseThrow(() -> new AppException(ExceptionCode.RESOURCE_NOT_FOUND,
                         "Sku: [" + sku + "] product is not exists"));
     }
 }
