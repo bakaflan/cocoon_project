@@ -21,5 +21,6 @@ public class CreateOrUpdateOrderCommand {
     private BigDecimal price;
     private BigDecimal totalPrice;
     @Valid
+    @NotNull
     private Address address;
 }

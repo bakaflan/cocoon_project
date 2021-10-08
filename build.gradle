@@ -41,7 +41,8 @@ dependencies {
     implementation group: 'com.github.database-rider', name: 'rider-spring', version: '1.31.0'
 
     // validation
-    implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '2.5.5'
+
 }
 
 test {

@@ -17,7 +17,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 @DBUnit(schema = "COCOON_TEST")
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = CocoonProjectApplication.class, webEnvironment = RANDOM_PORT)
-public class BaseApiTest {
+public class BaseSpringEnvTest {
     @LocalServerPort
     private int port;
 

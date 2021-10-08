@@ -1,7 +1,7 @@
 package com.ruiling.cocoon.access.order;
 
 import com.github.database.rider.core.api.dataset.DataSet;
-import com.ruiling.cocoon.BaseApiTest;
+import com.ruiling.cocoon.BaseSpringEnvTest;
 import com.ruiling.cocoon.domain.order.OrderStatus;
 import com.ruiling.cocoon.business.order.command.CreateOrUpdateOrderCommand;
 import com.ruiling.cocoon.infrastructure.Address;
@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 
-class OrderControllerTest extends BaseApiTest {
+class OrderControllerTest extends BaseSpringEnvTest {
     @Autowired
     CocoonObjectMapper objectMapper;
 
@@ -35,5 +35,22 @@ class OrderControllerTest extends BaseApiTest {
                 .statusCode(201)
                 .body("id", notNullValue())
                 .body("status", is(OrderStatus.CREATED.toString()));
+    }
+
+    @Test
+    @DataSet("access/commodity/commodity.yml")
+    void should_failed_create_order_given_error_command() {
+        CreateOrUpdateOrderCommand command = new CreateOrUpdateOrderCommand();
+        command.setSku("1");
+        command.setNumber(1);
+        command.setPrice(BigDecimal.valueOf(100));
+        command.setTotalPrice(BigDecimal.valueOf(100));
+        command.setAddress(new Address("Tianfu 3rd road", "thoughtworks", ""));
+
+        given()
+                .body(objectMapper.writeValueAsString(command))
+                .post("/api/order")
+                .then()
+                .statusCode(400);
     }
 }

@@ -1,13 +1,13 @@
 package com.ruiling.cocoon.access.commodity;
 
 import com.github.database.rider.core.api.dataset.DataSet;
-import com.ruiling.cocoon.BaseApiTest;
+import com.ruiling.cocoon.BaseSpringEnvTest;
 import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 
-class CommodityControllerTest extends BaseApiTest {
+class CommodityControllerTest extends BaseSpringEnvTest {
     @Test
     @DataSet("access/commodity/commodity.yml")
     void should_successfully_get_commodity_detail_given_product_id() {

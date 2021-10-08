@@ -4,6 +4,7 @@ import com.ruiling.cocoon.business.order.representation.CreateOrderRepresentatio
 import com.ruiling.cocoon.business.order.OrderCommandService;
 import com.ruiling.cocoon.business.order.command.CreateOrUpdateOrderCommand;
 import lombok.RequiredArgsConstructor;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -13,6 +14,7 @@ import javax.validation.Valid;
 
 import static org.springframework.http.HttpStatus.CREATED;
 
+@Validated
 @RestController
 @RequiredArgsConstructor
 public class OrderController {
