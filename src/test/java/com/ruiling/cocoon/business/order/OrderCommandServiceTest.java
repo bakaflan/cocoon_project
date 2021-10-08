@@ -1,13 +1,16 @@
 package com.ruiling.cocoon.business.order;
 
+import com.ruiling.cocoon.BaseComponentTest;
 import com.ruiling.cocoon.business.order.command.CreateOrUpdateOrderCommand;
 import com.ruiling.cocoon.domain.commodity.Commodity;
 import com.ruiling.cocoon.domain.commodity.CommodityRepository;
 import com.ruiling.cocoon.domain.order.Order;
 import com.ruiling.cocoon.domain.order.OrderRepository;
 import com.ruiling.cocoon.infrastructure.Address;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
 
@@ -21,12 +24,13 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-public class OrderCommandServiceTest {
+@ExtendWith(MockitoExtension.class)
+public class OrderCommandServiceTest extends BaseComponentTest {
     private OrderRepository orderRepository;
     private CommodityRepository commodityRepository;
     private OrderCommandService orderCommandService;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         orderRepository = mock(OrderRepository.class);
         commodityRepository = mock(CommodityRepository.class);

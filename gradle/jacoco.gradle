@@ -2,9 +2,8 @@ apply plugin: 'jacoco'
 
 jacocoTestReport {
     reports {
-        xml.required = false
-        csv.required = false
-        html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
+        xml.enabled true
+        html.enabled true
     }
 }
 
@@ -12,7 +11,7 @@ jacocoTestCoverageVerification {
     violationRules {
         rule {
             limit {
-                minimum = 0.6
+                minimum = 0.8
             }
             element = 'CLASS'
             excludes = [

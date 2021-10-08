@@ -1,7 +1,7 @@
 package com.ruiling.cocoon.access.order;
 
 import com.github.database.rider.core.api.dataset.DataSet;
-import com.ruiling.cocoon.BaseSpringEnvTest;
+import com.ruiling.cocoon.BaseTest;
 import com.ruiling.cocoon.domain.order.OrderStatus;
 import com.ruiling.cocoon.business.order.command.CreateOrUpdateOrderCommand;
 import com.ruiling.cocoon.infrastructure.Address;
@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 
-class OrderControllerTest extends BaseSpringEnvTest {
+public class OrderControllerTest extends BaseTest {
     @Autowired
     CocoonObjectMapper objectMapper;
 

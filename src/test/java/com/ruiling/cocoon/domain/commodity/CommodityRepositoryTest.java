@@ -1,7 +1,7 @@
 package com.ruiling.cocoon.domain.commodity;
 
 import com.github.database.rider.core.api.dataset.DataSet;
-import com.ruiling.cocoon.BaseSpringEnvTest;
+import com.ruiling.cocoon.BaseTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class CommodityRepositoryTest extends BaseSpringEnvTest {
+public class CommodityRepositoryTest extends BaseTest {
     @Autowired
     private CommodityRepository commodityRepository;
 
