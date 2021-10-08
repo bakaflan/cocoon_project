@@ -1,4 +1,4 @@
-package com.ruiling.cocoon.access.commodity.representation;
+package com.ruiling.cocoon.business.commodity.representation;
 
 import com.ruiling.cocoon.domain.commodity.Commodity;
 import com.ruiling.cocoon.infrastructure.Image;

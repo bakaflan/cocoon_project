@@ -3,7 +3,7 @@ package com.ruiling.cocoon.access.order;
 import com.github.database.rider.core.api.dataset.DataSet;
 import com.ruiling.cocoon.BaseApiTest;
 import com.ruiling.cocoon.domain.order.OrderStatus;
-import com.ruiling.cocoon.domain.order.command.CreateOrUpdateOrderCommand;
+import com.ruiling.cocoon.business.order.command.CreateOrUpdateOrderCommand;
 import com.ruiling.cocoon.infrastructure.Address;
 import com.ruiling.cocoon.infrastructure.CocoonObjectMapper;
 import org.junit.jupiter.api.Test;
@@ -19,7 +19,7 @@ class OrderControllerTest extends BaseApiTest {
     CocoonObjectMapper objectMapper;
 
     @Test
-    @DataSet("api/commodity/commodity.yml")
+    @DataSet("access/commodity/commodity.yml")
     void should_successfully_create_order_given_single_commodity() {
         CreateOrUpdateOrderCommand command = new CreateOrUpdateOrderCommand();
         command.setSku("1");

@@ -9,7 +9,7 @@ import static org.hamcrest.CoreMatchers.is;
 
 class CommodityControllerTest extends BaseApiTest {
     @Test
-    @DataSet("api/commodity/commodity.yml")
+    @DataSet("access/commodity/commodity.yml")
     void should_successfully_get_commodity_detail_given_product_id() {
         given()
                 .get("/api/commodity/1")

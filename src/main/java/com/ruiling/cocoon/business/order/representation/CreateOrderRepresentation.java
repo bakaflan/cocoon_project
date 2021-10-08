@@ -1,4 +1,4 @@
-package com.ruiling.cocoon.access.order.representation;
+package com.ruiling.cocoon.business.order.representation;
 
 import com.ruiling.cocoon.domain.order.OrderStatus;
 import lombok.Getter;

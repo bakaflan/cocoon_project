@@ -1,6 +1,6 @@
-package com.ruiling.cocoon.bussiness.commodity;
+package com.ruiling.cocoon.business.commodity;
 
-import com.ruiling.cocoon.access.commodity.representation.CommodityDetailRepresentation;
+import com.ruiling.cocoon.business.commodity.representation.CommodityDetailRepresentation;
 import com.ruiling.cocoon.domain.commodity.Commodity;
 import com.ruiling.cocoon.domain.commodity.CommodityRepository;
 import com.ruiling.cocoon.infrastructure.exception.AppException;
@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class ProductCommandService {
+public class CommodityCommandService {
     private final CommodityRepository commodityRepository;
 
     @Transactional(readOnly = true)

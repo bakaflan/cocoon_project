@@ -1,4 +1,4 @@
-package com.ruiling.cocoon.domain.order.command;
+package com.ruiling.cocoon.business.order.command;
 
 import com.ruiling.cocoon.infrastructure.Address;
 import lombok.Getter;

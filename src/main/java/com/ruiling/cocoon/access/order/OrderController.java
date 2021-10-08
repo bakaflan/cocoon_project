@@ -1,8 +1,8 @@
 package com.ruiling.cocoon.access.order;
 
-import com.ruiling.cocoon.access.order.representation.CreateOrderRepresentation;
-import com.ruiling.cocoon.bussiness.order.OrderCommandService;
-import com.ruiling.cocoon.domain.order.command.CreateOrUpdateOrderCommand;
+import com.ruiling.cocoon.business.order.representation.CreateOrderRepresentation;
+import com.ruiling.cocoon.business.order.OrderCommandService;
+import com.ruiling.cocoon.business.order.command.CreateOrUpdateOrderCommand;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

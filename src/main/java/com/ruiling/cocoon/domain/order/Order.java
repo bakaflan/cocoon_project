@@ -1,7 +1,7 @@
 package com.ruiling.cocoon.domain.order;
 
 import com.ruiling.cocoon.domain.commodity.Commodity;
-import com.ruiling.cocoon.domain.order.command.CreateOrUpdateOrderCommand;
+import com.ruiling.cocoon.business.order.command.CreateOrUpdateOrderCommand;
 import com.ruiling.cocoon.infrastructure.Address;
 import lombok.Getter;
 import lombok.Setter;
